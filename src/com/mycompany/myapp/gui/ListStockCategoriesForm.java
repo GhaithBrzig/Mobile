@@ -28,7 +28,7 @@ public class ListStockCategoriesForm extends Form {
   public ListStockCategoriesForm() {
         setTitle("Stock Categories");
         getToolbar().addMaterialCommandToSideMenu("Stock List", FontImage.MATERIAL_EVENT, e -> 
-                new ListStockCategoriesForm().show()
+                new ListStocksForm().show()
         );
         getToolbar().addMaterialCommandToSideMenu("Categories List ", FontImage.MATERIAL_BOOK, e -> 
                 new ListStockCategoriesForm().show()

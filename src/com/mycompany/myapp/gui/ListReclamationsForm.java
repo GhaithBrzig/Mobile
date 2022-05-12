@@ -28,7 +28,7 @@ public class ListReclamationsForm extends Form {
   public ListReclamationsForm() {
         setTitle("Reclamations");
         getToolbar().addMaterialCommandToSideMenu("Stock List", FontImage.MATERIAL_EVENT, e -> 
-                new ListReclamationsForm().show()
+                new ListStocksForm().show()
         );
         getToolbar().addMaterialCommandToSideMenu("Categories List ", FontImage.MATERIAL_BOOK, e -> 
                 new ListStockCategoriesForm().show()
