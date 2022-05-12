@@ -7,7 +7,7 @@
  */
 package com.mycompany.myapp.gui;
 import com.codename1.components.ToastBar;
-import com.mycompany.myapp.entities.Stock;
+import com.mycompany.myapp.entities.StockCategory;
 import com.codename1.ui.Form;
 
 import com.codename1.ui.Button;
@@ -25,6 +25,7 @@ import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.mycompany.myapp.entities.Stock;
 import com.mycompany.myapp.services.ServiceStock;
+import com.mycompany.myapp.services.ServiceStockCategory;
 import java.util.ArrayList;
 
 
@@ -80,9 +81,9 @@ public class AddUpdateStockForm extends Form{
             submitBtn.setText("Ajouter");
             
             ComboBox<String> StockCB = new ComboBox<>();
-            ArrayList<Stock> stocks = ServiceStock.getInstance().getAllStocks();
-            for (Stock stock : stocks) {
-                StockCB.addItem(Integer.toString(2));
+            ArrayList<StockCategory> stockcategories = ServiceStockCategory.getInstance().getAllStockCategories();
+            for (StockCategory stockCategory : stockcategories) {
+                StockCB.addItem(stockCategory.getNom());
             }
             categorieContainer.addAll(new Label("Categorie:"),StockCB);
             
